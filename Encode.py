@@ -7,8 +7,7 @@ import sys
 alter = int(str(datetime.date.today())[-2:]) #He He
 
 
-raw = input("what do you want encoded?  ")
-
+raw = " ".join(sys.argv[1:])
 #so now we have the string we want to encode
 
 encoded = []
@@ -27,7 +26,7 @@ for i in range(len(raw)):
 		letter = raw[i]
 		set = database.SETS[random.randint(0, (len(database.SETS) - 2))] #set Select
 		abb = set[random.randint(0, (len(set) - 2))] #abbrev select
-		
+
 		while len(abb[raw[i]]) == 0:
 			abb = set[random.randint(0, (len(set) - 2))]
 
@@ -52,7 +51,7 @@ for i in range(len(raw)):
 			abb = SETX[-2]
 
 		pos = abb[raw[i]][random.randint(0, len(abb[raw[i]]) - 1)]
-		
+
 		if pos > 9:
 			new = [str(pos)[0], SETX[-1] + name(abb['N'])[0].upper(), str(pos)[1]]
 		else:
