@@ -2,11 +2,13 @@ import string
 import re
 from database import * #I hate this too but I'm not re-writing this code...
 import datetime
+import os
+import sys
 alter = int(str(datetime.date.today())[-2:]) # He He
 
 Final = ""
 
-encoded = input("What do you want to Decode?  ") 
+encoded =  input("What do you want to Decrypt?  \n") #" ".join(sys.argv[1:])
 split = re.findall("\d[\d|\w]\w[\d|\w]", encoded)
 
 length = len(split)
@@ -18,10 +20,11 @@ else:
 #I honestly don't know what's going on here....time for the notebook
 
 split.insert(origin+1, split.pop())
-split.insert(origin+1, split.pop(0)) 
+split.insert(origin+1, split.pop(0))
 #takes the two edge letters and inserts them into the middle of the list
 
-abc = string.ascii_uppercase
+abc = string.ascii_lowercase
+ABC = string.ascii_uppercase
 
 # print(split)
 
@@ -43,6 +46,11 @@ for i in range(len(split)):
 			for letta in set[dic].items():
 				if pt1 in letta[1]:
 					Final+= letta[0]
+
+		elif pt2[1] == ABC[int(set[dic]['N'][0])]:
+			for letta in set[dic].items():
+				if pt1 in letta[1]:
+					Final+= letta[0].upper()
 	mod +=1
 
 
