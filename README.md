@@ -3,7 +3,7 @@
 <br>
 <br>
 
-## B.B..But what does it do?
+## B..B..But what does it do?
 **This basically _Encrypts_ and _Decrypts_ text messages into a code that nobody can understand unless they possess this _Encryptor_ / _Decryptor_**
 <br>
 <br>
@@ -40,19 +40,35 @@ peanut butter and jelly sandwiches!
 ```
 
 <p align="center">
-  <img src="voila.png"
-<p>
+  <img src="voila.png">
+</p>
 
+<br>
 
+## C..C..Careful Now..!
+There are some characters (", ^,) that you have to surround in double quotes if you want them to make it through the encryption process
+ie:
 
+```
+what do you want to encoded?  
+peanut butter and jelly sandwiches!^
+
+```
+Will Encrypt the message : _peanut butter and jelly sandwiches!_
+**Whereas**:
+```
+
+what do you want to encoded?  
+peanut butter and jelly sandwiches!"^"
+```
+Will Encrypt the message:_peanut butter and jelly sandwiches!^_
 
 
 ## Anything else?
-Abbrevify does ** NOT ** currently support caapital letters but I'm gonna add that soon and the encryption has nothing to do with unicode
- so **English** is currently(_and probably forever_) the only supported language
+The encryption has nothing to do with Unicode so **English** is currently(_and probably forever_) the only supported language
 <br>
 <br>
 
 
  ## A special thanks!
- **To myself** for making this spaghetti code possible
+ **To myself**! for making this spaghetti code possible
