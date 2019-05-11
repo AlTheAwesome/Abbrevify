@@ -1,38 +1,27 @@
-import string
-import re
+import kivy
+from kivy.app import App
+from kivy.uix.widget import Widget
+from kivy.properties import ObjectProperty
+import os
+import sys
+import Encode
+import Decode
 
-letters = list(string.ascii_lowercase)
 
-def nothere(word):
-	for i in word:
-		if i in letters:
-			letters.remove(i)
-	return letters
+class TheGrid(Widget):
+	encode = ObjectProperty(None)
+	decode = ObjectProperty(None)
+	result = ObjectProperty(None)
 
-#set1
-# print(nothere("completely automated public turing test computers humans appart"))
-# print(nothere("completely automated public turing test computers humans appart wired equivilant privacy"))
-# print(nothere("completely automated public turing test computers humans appart wired equivilant privacy organization unique identifier"))
-# print(nothere("completely automated public turing test computers humans appart wired equivilant privacy organization unique identifier joint photographic experts group"))
-# print(nothere("completely automated public turing test computers humans appart wired equivilant privacy organization unique identifier joint photographic experts group disk operating system"))
+	def encbtn(self):
+		self.result.text = str(Encode.Encrypt(self.encode.text))
+	def decbtn(self):
+		self.result.text = str(Decode.Decrypt(self.decode.text))
 
-#set2
-print(nothere("national television system comitee")) #NTSC
-print(nothere("national television system comitee standard commands programmable instrumentation hypertext markup language")) #HTML
-print(nothere("national television system comitee standard commands programmable instrumentation hypertext markup language resource acquisition is initialization")) #RAII
-print(nothere("national television system comitee standard commands programmable instrumentation hypertext markup language resource acquisition is initialization software project management")) #SPM
-# print(nothere("national television system comitee standard commands programmable instrumentation")) #SCPI
+class Abbrevify(App):
+	def build(self):
+		return TheGrid()
 
-#set3
-# print(nothere("electronically erasable programmable read only memory")) #EEPROM
-# print(nothere("electronically erasable programmable read only memory common object request broker architecture")) #CORBA
-# print(nothere("electronically erasable programmable read only memory common object request broker architecture berkely open infastructure for network computing")) #BOINC
-# print(nothere("electronically erasable programmable read only memory common object request broker architecture berkely open infastructure for network computing orthogonal frequency division multiplexing")) #OFDM
-# print(nothere("electronically erasable programmable read only memory common object request broker architecture berkely open infastructure for network computing orthogonal frequency division multiplexing international standardization organization")) #ISO
 
-# def places(word):
-# 	placez = []
-# 	for i in word:
-# 		placez.append(letters.index(i))
-# 	return placez
-# print(places("iso"))
+if __name__ == "__main__":
+	Abbrevify().run()
