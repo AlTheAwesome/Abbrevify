@@ -15,8 +15,10 @@ class TheGrid(Widget):
 
 	def encbtn(self):
 		self.result.text = str(Encode.Encrypt(self.encode.text))
+		self.encode.text = ""
 	def decbtn(self):
 		self.result.text = str(Decode.Decrypt(self.decode.text))
+		self.decode.text = ""
 
 class Abbrevify(App):
 	def build(self):

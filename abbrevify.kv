@@ -9,29 +9,22 @@
 		cols:1
 		size:root.width, root.height
 
-		GridLayout:
-			cols:1
-			Label:
-				text: "What do you want to Encrypt?"
-			TextInput:
-				id: encode
-				multiline:False
-			Button:
-				on_press: root.encbtn()
-				text: "En-CODE"
+		Label:
+			text: "What would you like to Encrypt?"
+		TextInput:
+			focus: True
+			id: encode
+		Button:
+			on_press: root.encbtn()
+			text: "^ENCRYPT^"
 
-			TextInput:
-				id: result
-				multiline:False
+		TextInput:
+			id: result
 
-		GridLayout:
-			size:root.width - 300, root.height - 300
-			cols:1
-			Label:
-				text: "Decode"
-			TextInput:
-				id: decode
-				multiline:False
-			Button:
-				on_press: root.decbtn()
-				text: "De_CODE"
+		Label:
+			text: "What would you like to Decrypt?"
+		TextInput:
+			id: decode
+		Button:
+			on_press: root.decbtn()
+			text: "^DECRYPT^"
