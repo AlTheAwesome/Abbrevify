@@ -34,6 +34,7 @@ python -m pip install kivy
 <br>
 <br>
 **To Encrypt a message to send to your buddy Just input your message into the Encrypt textbox and press _ENCRYPT_**
+
 ![scrstwo](Screenshots/Screenshot_2.png)
 <br>
 <br>
@@ -50,7 +51,7 @@ python -m pip install kivy
 <br>
 <br>
 <br>
-**The Decrypted message will once again appear in the REULT textbox so you can read it!**
+**The Decrypted message will once again appear in the RESULT textbox so you can read it!**
 
 ![scrsfive](Screenshots/Screenshot_5.png)
 
