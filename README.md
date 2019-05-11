@@ -10,7 +10,7 @@
 
 
 ## Dependencies
-**since the UI is make using Kivy it is required for This UI version of Abbrevify.**
+**since the UI is made using Kivy it is required for This UI version of Abbrevify.**
 
 You can install Kivy *(along with it's dependencies)* with pip using the following commands
 <br>
